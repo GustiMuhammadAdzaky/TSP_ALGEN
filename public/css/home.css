@@ -1,0 +1,376 @@
+:root {
+    --primary:#034367;
+    --second:#FFF112;
+    --tertiary:#ffffff;
+}
+
+
+.container{
+    margin: 0 3rem 0 3rem;
+}
+
+
+.vektor{
+    border: solid 1rem #FFF112;
+    opacity: 0.2;
+}
+
+
+/* icon */
+.child-bot-footer a {
+    margin: 0 10px;
+    font-size: 24px; /* Ukuran ikon */
+    color: white; /* Warna default */
+}
+
+.child-bot-footer a:hover {
+    color: #666; /* Warna saat hover */
+}
+
+/* Atau bisa juga memberi warna spesifik untuk masing-masing ikon */
+.fa-instagram:hover {
+    color: #E4405F;
+}
+
+.fa-facebook-f:hover {
+    color: #1877F2;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+}
+
+
+/* btn */
+.btn{
+    padding: 0.1rem 2rem 0.1rem 2rem;
+    background-color: #FFF112;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: var(--tertiary);
+    background-color: var(--primary);
+}
+
+
+
+
+/* navbar */
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+nav{
+    background-color: white;
+    padding: 10px;
+    /* box-shadow: 1px 1px 1px 2px #888888; */
+}
+
+
+nav>.navbar{
+   display: flex;
+   flex-direction:row;
+   justify-content: space-between;
+   padding: 1rem;
+}
+
+
+.nav-content{
+    display: flex;
+    flex-direction:row;
+    gap: 1rem;
+}
+
+.nav-content>.nav-item{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.nav-content>.nav-item>span:hover{
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--primary);
+}
+
+nav.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: #ffffff; /* Warna navbar */
+}
+
+
+
+/* Jumbotron */
+
+.jumbotron{
+    margin-top: 3px;
+    background-image: linear-gradient(#DDC7FF, #004165);
+}
+
+
+
+.jumbotron .container .row{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.jumbotron .container .row .col{
+    margin: 5rem;
+}
+
+/* card */
+
+
+.promote-card{
+    margin: -3rem 2rem 0 2rem;
+    display: flex;
+    box-shadow: 1px 1px 1px 1px #888888;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    padding: 1rem;
+}
+
+
+/* destinasi/main */
+.destinasi{
+    /* margin: 0 10rem 0 10rem !important; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikal */
+    align-items: center; /* Horizontal */
+}
+
+.destinasi .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.content>.card{
+    box-shadow: 1px 1px 1px 1px #888888;   
+    /* border-radius: 15px; */
+    align-self: center
+}
+
+.destinasi>.content>.card>img{
+    width: 20rem;
+}
+
+
+/* footer */
+footer{
+    margin-top: 4.5rem;
+    background-image: linear-gradient(#07324A,#1177B0);
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer>.mid-footer{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+footer>.bot-footer{
+    background-color: #004165;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0 1.5rem;
+    }
+
+    /* Jumbotron responsive */
+    .jumbotron .container .row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .jumbotron .container .row .col {
+        margin: 2rem 1rem;
+    }
+
+    .jumbotron .container .row .kanan img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* card responsive */
+    .cards{
+        display: none;
+    }
+
+    /* Footer responsive */
+    .footer .mid-footer {
+        flex-direction: column;
+        margin: 1.5rem;
+    }
+
+    .destinasi .content {
+        gap: 1.5rem;
+    }
+
+    .destinasi .content .card img {
+        width: 16rem;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 0 1rem;
+    }
+
+    /* Navbar responsive */
+    nav > .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-content {
+        justify-content: center;
+    }
+
+    /* Jumbotron text responsive */
+    .jumbotron {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .jumbotron .container .row .col {
+        margin: 1rem;
+    }
+
+    .jumbotron h1 {
+        font-size: 1.5rem;
+    }
+
+    .jumbotron h3 {
+        font-size: 1rem;
+    }
+
+    /* Card responsive */
+    .promote-card {
+        margin: -2rem 1rem 0 1rem;
+    }
+
+    .promote-card img {
+        width: 6rem !important;
+    }
+
+    .cards{
+        display: none;
+    }
+
+    /* Destinasi responsive */
+    .destinasi .content .card img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Footer responsive */
+    footer {
+        font-size: 1rem;
+    }
+
+    .bot-footer {
+        flex-direction: column;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .child-bot-footer {
+        margin: 0.5rem 0 !important;
+    }
+
+    /* Icon size adjustment */
+    .child-bot-footer a {
+        font-size: 20px;
+    }
+
+    /* Button responsive */
+    .btn {
+        padding: 0.1rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (320px and below) */
+@media screen and (max-width: 320px) {
+    .container {
+        margin: 0 0.5rem;
+    }
+
+    .jumbotron h1 {
+        font-size: 1.2rem;
+    }
+
+    .jumbotron h3 {
+        font-size: 0.9rem;
+    }
+
+    .cards{
+        display: none;
+    }
+
+    .destinasi .content .card img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
